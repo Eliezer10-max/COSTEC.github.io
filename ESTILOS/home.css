@@ -1,0 +1,179 @@
+body{
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: Arial;
+    font-size: 1em ;
+   }
+
+/* Logotipo y texto de la pagina*/
+   .TituloPrincipal{
+        font-size: 20px;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+    .ImagenPrincipal{
+        width: 30%;
+        height: 50%;  }
+
+/* Separacion de texto e imagen*/
+    .separacionIzquierda{
+        margin-left: 3px;}
+     .separacionDerecha{
+        margin-right: 20px; }
+
+
+/* Pegar texto e imagen*/
+    .pegados{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid white;
+            border-radius: 50px;
+            padding: 35px;
+            max-width: 1000px;
+            margin: 2px auto;
+            background-color: #032425;
+         }
+
+          .pegadosInicio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         }
+
+    .pegados2{
+        width: 300px;
+        height: 200px;
+         border: 2px solid white;
+            border-radius: 15px;
+            padding: 5px;
+            display: inline-block;
+                border-radius: 4px;
+
+        } 
+
+ .pegadosUltimo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            padding: 35px;
+            max-width: 100%;
+            margin: 2px auto;
+            background-color: white;
+         }
+        .ultimo {
+            color: blue;
+        }
+/* Parrafos*/
+    p{
+        text-align: justify;
+        font-family: arial;
+        color: white; 
+        margin-left: 70px;
+        margin-right: 70px; }
+        .txtCentrado{
+            text-align: center;    }
+    h4{
+    background-color:violet;
+    border: 2px solid blue;
+    text-align: center;
+    width:15%; 
+    margin-left: 70px;
+    margin-right: 70px; }
+
+
+/* Tabla Desplegable*/
+    nav{
+        max-width:900px;
+        margin: auto;
+        background-color: white;
+        font-size: 20px;
+        margin-top: 50px;  }
+        .menuHorizontal{
+            list-style:none;
+            display: flex;
+            justify-content: space-around; }
+            .menuHorizontal > li > a {
+                display: block;
+                padding: 15px 20px;
+                color: black;
+                text-decoration: none;}
+            .menuHorizontal > li:hover{
+                background-color: #0056b3;   }
+        .menuVertical{
+            position:absolute;
+            display: none;
+            list-style:none;
+            width:200px;
+            background-color: rgba(0, 0, 0, .5); }
+        .menuHorizontal li:hover .menuVertical{
+              display: block;   }
+        .menuVertical > li:hover {
+            background-color: #0056b3; }
+            .menuVertical li a {
+             display: block;
+            color: white; 
+            padding: 15px 15px 15px 20px;
+            text-decoration: none;}
+
+/* Links*/
+    a{
+        color: white;  }
+
+/* Parrafos*/
+    p{
+        text-align: justify;
+        font-family: arial;
+        color: white;
+        margin-left: 70px;
+        margin-right: 70px; }
+        .txtCentrado{
+            text-align: center;
+            margin-left: 70px;    }
+       
+/* Titulos de la pagina*/
+    h1{
+        text-align: center; 
+        color: White;
+        margin-left: 70px;
+        margin-right: 70px; }
+    .seccion{
+        color:#0056b3;
+    }
+
+    h2{
+        text-align: left; 
+        color: White;
+        margin-left: 70px;
+        margin-right: 70px; }
+
+/* imagenes*/
+    img{
+        margin-left: 70px;
+        margin-right: 70px; }
+
+
+         table {
+            width: 70%;
+            border-collapse: collapse;
+          margin-left: 185px;
+           background-color: #002854;
+            align-content: center;
+            color: white;
+            font-size: 12px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: justify;
+        }
+
+        .encabezado {
+        background-color: white;
+        color: black;
+        font-family: arial black;
+        }

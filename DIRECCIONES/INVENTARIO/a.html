@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSTEC - MI INVENTARIO</title>
+    <style>
+        body {
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Color de texto blanco */
+            font-family: Arial, sans-serif; /* Fuente Arial para todo el cuerpo */
+            font-size: 14px; /* Tamaño de fuente predeterminado */
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            margin: 20px auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        form input[type="text"],
+        form input[type="number"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            outline: none;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        button[type="button"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+           background-color: #002854;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+       button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+         table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #002854;
+            margin-right: 200px;
+            margin-left: 50px;
+            margin: 20px auto;
+        }
+     th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            background-color: #002854;
+        }
+   th {
+            background-color: #f2f2f2;
+        }
+    
+
+        
+        .textocolor{
+            color: black;
+        }
+        .textocolor1{
+            color: white;
+        }
+
+        /* Estilo para el formulario de edición (inicialmente oculto) */
+        #edit-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 9999;
+        }
+        #edit-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        #edit-form input[type="text"],
+        #edit-form input[type="number"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            outline: none;
+        }
+        #edit-form button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5B56FF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #edit-form button:hover {
+            background-color: #5B56FF;
+        }
+        #edit-form button[type="button"] {
+            background-color: #5B56FF;
+        }
+        #edit-form button[type="button"]:hover {
+            background-color: #5B56FF;
+        }
+
+        /* Logotipo y texto de la pagina*/
+   .TituloPrincipal{
+        font-size: 20px;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+    .ImagenPrincipal{
+        width: 30%;
+        height: 50%;;  }
+
+/* Separacion de texto e imagen*/
+    .separacionIzquierda{
+        margin-left: 20px;}
+     .separacionDerecha{
+        margin-right: 20px; }
+
+
+/* Pegar texto e imagen*/
+    .pegados{
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+    .pegados2{
+        width: 350px;
+        height: 250px; }
+
+
+/* Parrafos*/
+    p{
+        text-align: justify;
+        font-family: arial;
+        color: white;
+        margin-left: 20px;
+        margin-right: 70px; }
+        .txtCentrado{
+            text-align: center;
+         float: left;
+    width: 70%; /* Establecer el ancho del párrafo */
+          }
+    h4{
+    background-color:violet;
+    border: 2px solid blue;
+    text-align: center;
+    width:15%;
+    margin-left: 70px;
+    margin-right: 70px; }
+
+
+/* Tabla Desplegable*/
+
+   nav{
+        max-width:900px;
+        margin: 30px 0 auto ;
+        background-color: #333;
+        font-size: 20px;
+        margin-top: 30px;
+
+         }
+        .menuHorizontal{
+            list-style:none;
+            display: flex;
+            justify-content: space-around; }
+            .menuHorizontal > li > a {
+                display: block;
+                padding: 15px 20px;
+                color: white;
+                text-decoration: none;}
+            .menuHorizontal > li:hover{
+                background-color: #0056b3;   }
+        .menuVertical{
+            position:absolute;
+            display: none;
+            list-style:none;
+            width:200px;
+            background-color: rgba(0, 0, 0, .5); }
+        .menuHorizontal li:hover .menuVertical{
+              display: block;   }
+        .menuVertical > li:hover {
+            background-color: #0056b3; }
+            .menuVertical li a {
+             display: block;
+            color: white; 
+            padding: 15px 15px 15px 20px;
+            text-decoration: none;}
+
+            .content{
+                display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+            }
+
+  .pegadosUltimo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            padding: 35px;
+            max-width: 100%;
+            margin: 2px auto;
+            background-color: white;
+         }
+        .ultimo {
+            color: blue;
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="TituloPrincipal">
+        <img class="ImagenPrincipal" SRC="../../IMAGENES/EMPRESA/logoprincipal.png" ALT="No disponible"></img> 
+        <div class="separacionIzquierda">
+            <h2>INVENTARIO GRATUITO</h2>
+        
+<nav>
+        <ul class="menuHorizontal">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li>
+                <a href="#">Contactos</a>
+                <ul class="menuVertical">
+                    <li><a>Whatsapp</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100004798879378">Facebook</a></li>
+                    <li><a>Instagram</a></li>
+                </ul>
+                </li>
+            <li>
+                <a href="#">Antecedentes</a>
+                <ul class="menuVertical">
+                    <li><a href="#">Origen</a></li>
+                    <li><a href="#">Participantes</a></li>
+                    <li><a href="#">Instituto donde se realizo</a></li>
+                </ul>
+                </li>
+        </ul>
+    </nav>
+    </div>
+        </div>
+    <br><br> <br><br>
+
+
+<div class="content">
+    <table class="textocolor">
+        <thead>
+            <tr>
+                <th colspan="4"><h2>Inventario de Productos</h2></th>
+            </tr>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Operacion</th> <!-- Columna adicional para botones de eliminar y editar -->
+            </tr>
+        </thead>
+        <tbody class="textocolor1" id="inventory-body">
+            <!-- Filas de productos se cargarán aquí -->
+        </tbody>
+    </table>
+    <form id="product-form">
+        <h3>Agregar Producto</h3>
+        <label for="product-name">Nombre del Producto:</label>
+        <input type="text" id="product-name" required><br><br>
+
+        <label for="product-price">Precio:</label>
+        <input type="number" id="product-price" step="0.01" required><br><br>
+
+        <label for="product-quantity">Cantidad:</label>
+        <input type="number" id="product-quantity" required><br><br>
+
+        <button type="button" onclick="addProduct()">Agregar Producto</button>
+         <button type="button" onclick="confirmClearInventory()">Borrar Lista</button>
+    </form>
+    <br>
+
+    <!-- Formulario de edición (inicialmente oculto) -->
+    <div id="edit-form">
+        <h3>Editar Producto</h3>
+        <label for="edit-product-name">Nombre del Producto:</label>
+        <input type="text" id="edit-product-name"><br><br>
+
+        <label for="edit-product-price">Precio:</label>
+        <input type="number" id="edit-product-price" step="0.01"><br><br>
+
+        <label for="edit-product-quantity">Cantidad:</label>
+        <input type="number" id="edit-product-quantity"><br><br>
+
+        <button type="button" onclick="saveEditedProduct()">Guardar Cambios</button>
+        <button type="button" onclick="cancelEdit()">Cancelar</button>
+    </div>
+    </div>
+    <br><br><br><br>
+
+<div class="pegadosUltimo">
+            <img class="pegados2" SRC="../../IMAGENES/IMG PAGINA PRINCIPAL/educate.jpg" ALT="No disponible"></img> 
+        <div class="separacionDerecha">
+            <h1 class="ultimo">EDUCATE</h1>
+            <p class="ultimo">La informacion y herramientas financieras deben ser<br>
+            accesibles y para el todo publico.</p>
+            <br><br>
+        </div>
+
+    <script>
+        // Función para establecer la contraseña si no existe
+        function setInitialPassword() {
+            var password = prompt("Establecer contraseña:");
+            localStorage.setItem('password', password); // Guardar la contraseña
+        }
+
+        // Función para obtener la contraseña almacenada
+        function getPassword() {
+            return localStorage.getItem('password');
+        }
+
+        // Verificar si la contraseña ya está establecida
+        if (!getPassword()) {
+            setInitialPassword();
+        }
+
+        function addProduct() {
+            var productName = document.getElementById('product-name').value;
+            var productPrice = document.getElementById('product-price').value;
+            var productQuantity = document.getElementById('product-quantity').value;
+
+            // Crear una nueva fila para el producto
+            var row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${productName}</td>
+                <td>$${productPrice}</td>
+                <td>${productQuantity}</td>
+                <td>
+                    <button onclick="editProduct(this)">Editar</button> <!-- Botón de edición -->
+                    <button onclick="confirmDelete(this)">Eliminar</button> <!-- Botón de eliminación -->
+                </td>
+            `;
+
+            // Agregar la nueva fila al cuerpo de la tabla
+            document.getElementById('inventory-body').appendChild(row);
+
+            // Guardar el inventario en el almacenamiento local
+            saveInventory();
+
+            // Limpiar los campos del formulario después de agregar el producto
+            document.getElementById('product-name').value = '';
+            document.getElementById('product-price').value = '';
+            document.getElementById('product-quantity').value = '';
+        }
+
+        function editProduct(button) {
+            var enteredPassword = prompt("Ingrese la contraseña:");
+            if (enteredPassword === getPassword()) {
+                var row = button.parentNode.parentNode; // Obtener la fila que contiene el botón de edición
+                var productName = row.cells[0].textContent; // Obtener el nombre del producto
+                var productPrice = row.cells[1].textContent; // Obtener el precio del producto
+                var productQuantity = row.cells[2].textContent; // Obtener la cantidad del producto
+
+                // Mostrar el formulario de edición con los detalles actuales del producto
+                document.getElementById('edit-product-name').value = productName;
+                document.getElementById('edit-product-price').value = productPrice.replace('$', ''); // Eliminar el signo $ para obtener solo el número
+                document.getElementById('edit-product-quantity').value = productQuantity;
+
+                document.getElementById('edit-form').style.display = 'block';
+            } else {
+                alert("Contraseña incorrecta. No se puede editar el producto.");
+            }
+        }
+
+        function saveEditedProduct() {
+            // Obtener los valores editados del formulario de edición
+            var editedProductName = document.getElementById('edit-product-name').value;
+            var editedProductPrice = document.getElementById('edit-product-price').value;
+            var editedProductQuantity = document.getElementById('edit-product-quantity').value;
+
+            // Actualizar la fila de la tabla con los nuevos detalles del producto
+            var row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${editedProductName}</td>
+                <td>$${editedProductPrice}</td>
+                <td>${editedProductQuantity}</td>
+                <td>
+                    <button onclick="editProduct(this)">Editar</button>
+                    <button onclick="confirmDelete(this)">Eliminar</button>
+                </td>
+            `;
+
+            // Reemplazar la fila editada en la tabla
+            var editRowIndex = document.getElementById('edit-form').parentNode.rowIndex; // Obtener el índice de la fila a editar
+            document.getElementById('inventory-body').deleteRow(editRowIndex); // Eliminar la fila anterior
+            document.getElementById('inventory-body').appendChild(row); // Agregar la fila editada
+
+            // Ocultar el formulario de edición
+            document.getElementById('edit-form').style.display = 'none';
+
+            // Guardar el inventario actualizado en el almacenamiento local
+            saveInventory();
+        }
+
+        function cancelEdit() {
+            // Ocultar el formulario de edición sin guardar cambios
+            document.getElementById('edit-form').style.display = 'none';
+        }
+
+        function confirmDelete(row) {
+            var confirmation = confirm("¿Estás seguro de que deseas eliminar este producto?");
+            if (confirmation) {
+                var enteredPassword = prompt("Ingrese la contraseña:");
+                if (enteredPassword === getPassword()) {
+                    deleteProduct(row);
+                } else {
+                    alert("Contraseña incorrecta. No se eliminó el producto.");
+                }
+            }
+        }
+
+        function deleteProduct(row) {
+            // Obtener la fila padre (tr) del botón de eliminación y eliminarla
+            row.parentNode.parentNode.remove();
+
+            // Guardar el inventario actualizado en el almacenamiento local
+            saveInventory();
+        }
+
+        function confirmClearInventory() {
+            var enteredPassword = prompt("Ingrese la contraseña para borrar la lista:");
+            if (enteredPassword === getPassword()) {
+                clearInventory();
+            } else {
+                alert("Contraseña incorrecta. No se borró la lista.");
+            }
+        }
+
+        function clearInventory() {
+            setInitialPassword(); // Establecer una nueva contraseña
+            // Borrar todas las filas del cuerpo de la tabla
+            document.getElementById('inventory-body').innerHTML = '';
+
+            // Guardar el inventario vacío en el almacenamiento local
+            saveInventory();
+        }
+
+        function saveInventory() {
+            var inventoryRows = document.getElementById('inventory-body').innerHTML;
+            localStorage.setItem('inventory', inventoryRows);
+        }
+
+        function loadInventory() {
+            var inventoryRows = localStorage.getItem('inventory');
+            if (inventoryRows) {
+                document.getElementById('inventory-body').innerHTML = inventoryRows;
+            }
+        }
+
+        // Cargar el inventario al cargar la página
+        window.onload = function() {
+            loadInventory();
+        };
+    </script>
+</body>
+</html>

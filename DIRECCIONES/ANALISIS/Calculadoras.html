@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="ESTILOS/DiseñoDeLasCal.css">
+	<title>COSTEC - RENTABILIDAD</title>
+</head>
+<body>
+	<div class="TituloPrincipal">
+			<img class="ImagenPrincipal" SRC="../../IMAGENES/EMPRESA/logoprincipal.png" ALT="No disponible"></img> 
+		<div class="separacionIzquierda">
+			<h2>  HERRAMIENTA PARA RENTABILIDAD</h2>
+		</div>
+	</div>
+
+
+<!-- Tabla desplegable -->
+	<nav>
+		<ul class="menuHorizontal">
+			<li><a href="../../index.html">Inicio</a></li>
+			<li>
+				<a href="#">Contactos</a>
+				<ul class="menuVertical">
+					<li><a>Whatsapp</a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100004798879378">Facebook</a></li>
+					<li><a>Instagram</a></li>
+				</ul>
+				</li>
+			<li>
+				<a href="#">Antecedentes</a>
+				<ul class="menuVertical">
+					<li><a href="#">Origen</a></li>
+					<li><a href="#">Participantes</a></li>
+					<li><a href="#">Instituto donde se realizo</a></li>
+				</ul>
+				</li>
+		</ul>
+	</nav>
+	<br><br>
+
+
+	<h1>REUNIMOS "TODO"</h1>
+	<br>
+ <div class="background"></div>
+<div class="container">
+    <div class="content">
+         <p>Esta calculadora te ayuda a determinar la rentabilidad de una inversión o proyecto evaluando la ganancia obtenida en relación con la inversión inicial. Introduce los ingresos y costos asociados para obtener el porcentaje de rentabilidad, lo que facilita la comparación entre diferentes opciones de inversión.</p>
+        <p>Ideal para inversores y empresarios que desean evaluar rápidamente el rendimiento de sus inversiones o proyectos.</p>
+    </div>
+    <div class="calculator">
+        <h1 class="cuadro">Calculadora de Rentabilidad basica</h1>
+        <div>
+            <label for="costo">Costo del producto:</label>
+            <input type="number" id="costo">
+        </div>
+        <div>
+            <label for="precio">Precio de venta:</label>
+            <input type="number" id="precio">
+        </div>
+        <div>
+            <button onclick="calcularRentabilidad()">Calcular</button>
+        </div>
+        <div id="resultado"></div>
+    </div>
+</div>
+  <br><br><br>
+
+<div class="container">
+    <div class="content">
+        <p> Esta calculadora permite calcular los márgenes de beneficio bruto y neto. Al ingresar los ingresos totales y los costos asociados (costos de bienes vendidos y otros gastos), obtendrás el porcentaje del margen de beneficio bruto y neto. Esto te ayuda a entender cuánto estás ganando en comparación con tus costos.</p>
+        <p>Esencial para dueños de negocios y contadores que buscan optimizar las ganancias y evaluar la salud financiera de sus operaciones.</p>
+    </div>
+    <div class="calculator">
+        <h1 class="cuadro">Calculadora de Margen de beneficio</h1>
+       <label for="revenue">Ingresos ($):</label>
+            <input type="number" id="revenue" placeholder="Introduce los ingresos"><br>
+            <label for="cogs">Costo de los Bienes Vendidos (COGS) ($):</label>
+            <input type="number" id="cogs" placeholder="Introduce el COGS">
+            <label for="expenses"><br>Gastos Totales ($):</label>
+            <input type="number" id="expenses" placeholder="Introduce los gastos totales">
+            <button onclick="calculateProfitMargin()"><br>Calcular Márgenes de Beneficio</button>
+            <div class="result" id="profitMarginResult"></div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+
+<div class="container">
+    <div class="content">
+        <p>Esta herramienta facilita la creación y gestión de presupuestos personales o empresariales. Introduce tus ingresos y clasifica tus gastos (fijos y variables) para obtener un desglose detallado. Esto te ayuda a identificar áreas de ahorro y a planificar tus finanzas de manera más efectiva.</p>
+        <p>Útil para cualquier persona que quiera llevar un control detallado de sus finanzas, evitar gastos innecesarios y asegurarse de cumplir con sus objetivos financieros.</p>
+    </div>
+    <div class="calculator" id="budgetCalculator">
+            <h1>Calculadora de Presupuesto</h1>
+            <label for="income">Ingresos Totales ($):</label>
+            <input type="number" id="income" placeholder="Introduce los ingresos totales">
+            <label for="expenses"><br>Gastos Totales ($):</label>
+            <input type="number" id="expensesBudget" placeholder="Introduce los gastos totales">
+            <button onclick="calculateBudget()">Calcular Presupuesto</button>
+            <div class="result" id="budgetResult"></div>
+        </div>
+    </div>
+</div>
+  <script src="JS/Calculos.js"></script>
+  <br><br><br>
+ </div>
+
+<div class="pegadosUltimo">
+            <img class="pegados2" SRC="../../IMAGENES/IMG PAGINA PRINCIPAL/educate.jpg" ALT="No disponible"></img> 
+        <div class="separacionDerecha">
+            <h1 class="ultimo">EDUCATE</h1>
+            <p class="ultimo">La informacion y herramientas financieras deben ser<br>
+            accesibles y para el todo publico.</p>
+            <br><br>
+        </div>
+
+</body>
+</html>

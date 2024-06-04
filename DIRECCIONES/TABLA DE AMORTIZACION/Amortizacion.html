@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="ESTILOS/DiseñoDeLasCal.css">
+	<title>COSTEC - TABLA DE AMORTIZACION</title>
+</head>
+<body>
+	<div class="TituloPrincipal">
+			<img class="ImagenPrincipal" SRC="../../IMAGENES/EMPRESA/logoprincipal.png" ALT="No disponible"></img> 
+		<div class="separacionIzquierda">
+			<h2>  AMORTIZACION GRATUITA</h2>
+		</div>
+	</div>
+
+
+<!-- Tabla desplegable -->
+	<nav>
+		<ul class="menuHorizontal">
+			<li><a href="../../index.html">Inicio</a></li>
+			<li>
+				<a href="#">Contactos</a>
+				<ul class="menuVertical">
+					<li><a>Whatsapp</a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100004798879378">Facebook</a></li>
+					<li><a>Instagram</a></li>
+				</ul>
+				</li>
+			<li>
+				<a href="#">Antecedentes</a>
+				<ul class="menuVertical">
+					<li><a href="#">Origen</a></li>
+					<li><a href="#">Participantes</a></li>
+					<li><a href="#">Instituto donde se realizo</a></li>
+				</ul>
+				</li>
+		</ul>
+	</nav>
+	<br><br>
+
+<body>
+
+    <div class="container">
+        <h1>Calculadora de Amortización</h1>
+
+        <div class="calculator">
+            <label for="principal">Principal ($):</label>
+            <input type="number" id="principal" placeholder="Introduce el principal">
+
+            <label for="rate">Tasa de interés anual (%):</label>
+            <input type="number" id="rate" placeholder="Introduce la tasa de interés anual">
+
+            <label for="years">Años:</label>
+            <input type="number" id="years" placeholder="Introduce la cantidad de años">
+
+            <button onclick="generateAmortizationTable()">Generar Tabla de Amortización</button>
+        </div>
+
+        <div class="result" id="amortizationTableContainer"></div>
+        <button onclick="downloadPDF()">Descargar en PDF</button>
+    </div>
+    <br><br><br><br>
+    <script src="JS/Calculos.js"></script>
+
+    <div class="pegadosUltimo">
+            <img class="pegados2" SRC="../../IMAGENES/IMG PAGINA PRINCIPAL/educate.jpg" ALT="No disponible"></img> 
+        <div class="separacionDerecha">
+            <h1 class="ultimo">EDUCATE</h1>
+            <p class="ultimo">La informacion y herramientas financieras deben ser<br>
+            accesibles y para el todo publico.</p>
+            <br><br>
+        </div>
+	
+
+
+</body>
+</html>

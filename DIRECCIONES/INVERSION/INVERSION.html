@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="ESTILOS/DiseñoDeLasCal.css">
+	<title>COSTEC - INVERSION</title>
+</head>
+<body>
+	<div class="TituloPrincipal">
+			<img class="ImagenPrincipal" SRC="../../IMAGENES/EMPRESA/logoprincipal.png" ALT="No disponible"></img> 
+		<div class="separacionIzquierda">
+			<h2>  HERRAMIENTA DE INVERSION</h2>
+		</div>
+	</div>
+
+
+<!-- Tabla desplegable -->
+	<nav>
+		<ul class="menuHorizontal">
+			<li><a href="../../index.html">Inicio</a></li>
+			<li>
+				<a href="#">Contactos</a>
+				<ul class="menuVertical">
+					<li><a>Whatsapp</a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100004798879378">Facebook</a></li>
+					<li><a>Instagram</a></li>
+				</ul>
+				</li>
+			<li>
+				<a href="#">Antecedentes</a>
+				<ul class="menuVertical">
+					<li><a href="#">Origen</a></li>
+					<li><a href="#">Participantes</a></li>
+					<li><a href="#">Instituto donde se realizo</a></li>
+				</ul>
+				</li>
+		</ul>
+	</nav>
+	<br><br>
+
+<body>
+
+<div class="container">
+        <h1>Análisis de Inversiones</h1>
+        <p>Toma decisiones informadas sobre tus inversiones con nuestras herramientas de análisis. Evalúa el rendimiento y los riesgos asociados a diferentes opciones de inversión.</p>
+
+        <!-- Calculadora de Valor Presente Neto (VPN) -->
+        <div class="calculator">
+            <h2 class="seccion">Valor Presente Neto (VPN)</h2>
+            <label for="cashFlows">Flujos de caja (separados por comas):</label>
+            <textarea id="cashFlows" placeholder="Ejemplo: -1000, 200, 300, 400, 500"></textarea>
+            <label for="discountRate">Tasa de descuento (%):</label>
+            <input type="number" id="discountRate" placeholder="Introduce la tasa de descuento">
+            <button onclick="calculateNPV()">Calcular VPN</button>
+            <div class="result" id="npvResult"></div>
+        </div>
+
+        <!-- Calculadora de Tasa Interna de Retorno (TIR) -->
+        <div class="calculator">
+            <h2 class="seccion">Tasa Interna de Retorno (TIR)</h2>
+            <label for="irrCashFlows">Flujos de caja (separados por comas):</label>
+            <textarea id="irrCashFlows" placeholder="Ejemplo: -1000, 200, 300, 400, 500"></textarea>
+            <button onclick="calculateIRR()">Calcular TIR</button>
+            <div class="result" id="irrResult"></div>
+        </div>
+
+        <!-- Calculadora de Período de Recuperación -->
+        <div class="calculator">
+            <h2 class="seccion">Período de Recuperación</h2>
+            <label for="initialInvestment">Inversión inicial ($):</label>
+            <input type="number" id="initialInvestment" placeholder="Introduce la inversión inicial">
+            <label for="paybackCashFlows">Flujos de caja anuales (separados por comas):</label>
+            <textarea id="paybackCashFlows" placeholder="Ejemplo: 200, 300, 400, 500"></textarea>
+            <button onclick="calculatePaybackPeriod()">Calcular Período de Recuperación</button>
+            <div class="result" id="paybackResult"></div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <script src="JS/Calculos.js"></script>
+
+
+    <div class="pegadosUltimo">
+            <img class="pegados2" SRC="../../IMAGENES/IMG PAGINA PRINCIPAL/educate.jpg" ALT="No disponible"></img> 
+        <div class="separacionDerecha">
+            <h1 class="ultimo">EDUCATE</h1>
+            <p class="ultimo">La informacion y herramientas financieras deben ser<br>
+            accesibles y para el todo publico.</p>
+            <br><br>
+        </div>
+	
+
+
+</body>
+</html>

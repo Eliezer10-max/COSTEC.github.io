@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="ESTILOS/DiseñoDeLasCal.css">
+	<title>COSTEC - IMPUESTOS</title>
+</head>
+<body>
+	<div class="TituloPrincipal">
+			<img class="ImagenPrincipal" SRC="../../IMAGENES/EMPRESA/logoprincipal.png" ALT="No disponible"></img> 
+		<div class="separacionIzquierda">
+			<h2> HERRAMIENTA DE IMPUESTOS</h2>
+		</div>
+	</div>
+
+
+<!-- Tabla desplegable -->
+	<nav>
+		<ul class="menuHorizontal">
+			<li><a href="../../index.html">Inicio</a></li>
+			<li>
+				<a href="#">Contactos</a>
+				<ul class="menuVertical">
+					<li><a>Whatsapp</a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100004798879378">Facebook</a></li>
+					<li><a>Instagram</a></li>
+				</ul>
+				</li>
+			<li>
+				<a href="#">Antecedentes</a>
+				<ul class="menuVertical">
+					<li><a href="#">Origen</a></li>
+					<li><a href="#">Participantes</a></li>
+					<li><a href="#">Instituto donde se realizo</a></li>
+				</ul>
+				</li>
+		</ul>
+	</nav>
+	<br><br>
+
+<body>
+
+ <div class="container">
+        <h1>Calculadoras Contables de Impuestos</h1>
+        <p class="negro">Mantén tus obligaciones fiscales bajo control con nuestras calculadoras de impuestos. Ya seas un emprendedor, una pequeña empresa o un individuo, nuestras herramientas te permiten calcular de manera precisa los impuestos que debes pagar. Introduce tus ingresos, gastos y otras variables relevantes para obtener un desglose detallado de tus impuestos.</p>
+
+        <!-- Calculadora de IVA e ISR -->
+        <div class="calculator">
+            <h2 class="seccion">IVA e ISR</h2>
+            <label for="income">Ingresos ($):</label>
+            <input type="number" id="income" placeholder="Introduce tus ingresos">
+            <label for="expenses">Gastos ($):</label>
+            <input type="number" id="expenses" placeholder="Introduce tus gastos">
+            <button onclick="calculateTaxes()">Calcular IVA e ISR</button>
+            <div class="result" id="taxesResult"></div>
+        </div>
+
+        <!-- Calculadora de Retenciones -->
+        <div class="calculator">
+            <h2 class="seccion">Retenciones</h2>
+            <label for="retentionIncome">Ingresos ($):</label>
+            <input type="number" id="retentionIncome" placeholder="Introduce tus ingresos">
+            <label for="retentionRate">Tasa de retención (%):</label>
+            <input type="number" id="retentionRate" placeholder="Introduce la tasa de retención">
+            <button onclick="calculateRetention()">Calcular Retenciones</button>
+            <div class="result" id="retentionResult"></div>
+        </div>
+
+        <!-- Calculadora de Declaraciones Anuales -->
+        <div class="calculator">
+            <h2 class="seccion">Declaraciones Anuales</h2>
+            <label for="annualIncome">Ingresos anuales ($):</label>
+            <input type="number" id="annualIncome" placeholder="Introduce tus ingresos anuales">
+            <label for="annualExpenses">Gastos anuales ($):</label>
+            <input type="number" id="annualExpenses" placeholder="Introduce tus gastos anuales">
+            <button onclick="calculateAnnualDeclaration()">Calcular Declaraciones Anuales</button>
+            <div class="result" id="annualDeclarationResult"></div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <script src="JS/Calculos.js"></script>
+	
+<div class="pegadosUltimo">
+            <img class="pegados2" SRC="../../IMAGENES/IMG PAGINA PRINCIPAL/educate.jpg" ALT="No disponible"></img> 
+        <div class="separacionDerecha">
+            <h1 class="ultimo">EDUCATE</h1>
+            <p class="ultimo">La informacion y herramientas financieras deben ser<br>
+            accesibles y para el todo publico.</p>
+            <br><br>
+        </div>
+
+</body>
+</html>

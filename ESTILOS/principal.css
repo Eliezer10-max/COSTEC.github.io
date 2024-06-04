@@ -1,0 +1,104 @@
+body{
+    background-image: url(FONDOITSZN.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+   }
+
+
+.barradefondo{
+background:;}
+
+.no1imagenapegar{
+	position: relative;
+	display: inline-block;
+	text-align: center; }
+.no2textoapegar {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	transform: translate(-50%);
+}
+
+.pagina{
+	color:BLACK;
+	border-color: 4px black;
+	font-size: 70px;
+	text-align: center; }
+
+.ITSZNTEXT{
+	font-size: 20px;
+	color: #095C82; }
+
+.ITSZNIMAGE{
+	border: 50px blue; }
+
+.IMGTEXT{
+	display: flex;}
+
+.derecha{
+	text-align: right; }
+
+.centro{
+	text-align: center; }
+
+.promocion{
+	position: relative;
+	width: 70%;
+	height: 70%; }
+
+
+
+p{
+	text-align: justify;
+	font-family: arial; }
+
+
+img{
+	width: 20%;
+	height: 70%; }
+
+li{
+	background-color:violet;
+	border: 2px solid blue;
+	text-align: center;
+	width:45%; }
+
+table{
+	border-collapse:collapse;
+	border: 3px solid blue;
+	table-layout: fixed;
+	width:80%; }
+
+td{
+	padding:5px;
+	border:1px solid violet; }
+
+th{
+	background-color:violet;
+	padding:5px }
+
+tr{
+	height:80px; }
+
+h1{
+	font-family: Arial black;
+	color: blue; }
+
+h2{
+	font-family: Arial black;
+	text-align: center; }
+
+h3{
+	font-family: arial; }
+
+
+h4{
+	background-color:violet;
+	border: 2px solid blue;
+	text-align: center;
+	width:15%; }
+
+

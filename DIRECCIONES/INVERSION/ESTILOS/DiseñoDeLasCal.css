@@ -1,0 +1,189 @@
+body{
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: Arial;
+    font-size: 1em ;
+   }
+
+/* Logotipo y texto de la pagina*/
+   .TituloPrincipal{
+        font-size: 20px;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+    .ImagenPrincipal{
+       width: 30%;
+        height: 50%;  }
+
+/* Separacion de texto e imagen*/
+    .separacionIzquierda{
+        margin-left: 20px;}
+     .separacionDerecha{
+        margin-right: 20px; }
+
+
+/* Pegar texto e imagen*/
+    .pegados{
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+    .pegados2{
+        width: 350px;
+        height: 250px; }
+
+
+/* Parrafos*/
+    p{
+        text-align: justify;
+        font-family: arial;
+        color: white;
+        margin-left: 20px;
+        margin-right: 70px; }
+        .txtCentrado{
+            text-align: center;
+         float: left;
+    width: 70%; /* Establecer el ancho del párrafo */
+          }
+    h4{
+    background-color:violet;
+    border: 2px solid blue;
+    text-align: center;
+    width:15%;
+    margin-left: 70px;
+    margin-right: 70px; }
+
+
+/* Tabla Desplegable*/
+    nav{
+        max-width:900px;
+        margin: auto;
+        background-color: #333;
+        font-size: 20px;
+        margin-top: 50px;  }
+        .menuHorizontal{
+            list-style:none;
+            display: flex;
+            justify-content: space-around; }
+            .menuHorizontal > li > a {
+                display: block;
+                padding: 15px 20px;
+                color: white;
+                text-decoration: none;}
+            .menuHorizontal > li:hover{
+                background-color: #0056b3;   }
+        .menuVertical{
+            position:absolute;
+            display: none;
+            list-style:none;
+            width:200px;
+            background-color: rgba(0, 0, 0, .5); }
+        .menuHorizontal li:hover .menuVertical{
+              display: block;   }
+        .menuVertical > li:hover {
+            background-color: #0056b3; }
+            .menuVertical li a {
+             display: block;
+            color: white; 
+            padding: 15px 15px 15px 20px;
+            text-decoration: none;}
+
+/* Links*/
+    a{
+        color: white;}
+       
+/* Titulos de la pagina*/
+    h1{
+        text-align: center; 
+        color: White; 
+        margin-left: 70px;
+        margin-right: 70px;}
+        .cuadro{
+            margin-left: 20px;
+        }
+
+    h2{
+        text-align: left; 
+        color: white; 
+        margin-left: 70px;
+        margin-right: 70px;}
+        .seccion{
+            color: black;
+        }
+/* imagenes*/
+    img{
+        margin-left: 70px;
+        margin-right: 70px; }
+
+
+
+
+/* tabla*/
+
+ .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #002854;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 4px solid #ccc;
+  border-radius: 14px;
+        }
+        h1 {
+            color: whitesmoke;
+        }
+        .seccion{
+            color: white;
+        }
+        .calculator {
+            margin-bottom: 40px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: white;
+        }
+        input, textarea {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+         .pegadosUltimo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            padding: 35px;
+            max-width: 100%;
+            margin: 2px auto;
+            background-color: white;
+         }
+        .ultimo {
+            color: blue;
+            margin-left: 80px;
+        }
